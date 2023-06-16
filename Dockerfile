@@ -10,7 +10,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the Flask application code to the working directory
-COPY main.py .
+COPY . .
 
 # Set the environment variable to run the application
 ENV FLASK_APP=main.py

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .content {
+            text-align: center;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .form-container input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .form-container button:hover {
+            background-color: #2E64C8;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Guess the Number</h1>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+        <div class="form-container">
+            <form action="/play" method="post">
+                <input type="number" name="guess" placeholder="Enter your guess" required inputmode="numeric">
+                <button type="submit">Submit</button>
+            </form>
+        </div
+
